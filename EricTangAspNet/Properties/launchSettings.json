@@ -2,6 +2,10 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/EricTangAspNet",
+      "sslPort": 0
+    },
     "iisExpress": {
       "applicationUrl": "http://localhost:50447/",
       "sslPort": 0
@@ -9,19 +13,23 @@
   },
   "profiles": {
     "IIS Express": {
-      "commandName": "IISExpress",
+      "commandName": "IIS",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "EricTangAspNet": {
-      "commandName": "Project",
+      "commandName": "IIS",
       "launchBrowser": true,
+      "launchUrl": "http://localhost/EricTangAspNet",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "applicationUrl": "http://localhost:50448/"
+    },
+    "IIS": {
+      "commandName": "IIS"
     }
   }
 }

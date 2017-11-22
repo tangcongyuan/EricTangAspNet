@@ -27,7 +27,7 @@ namespace EricTangAspNet
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                await context.Response.WriteAsync(text: "If you see this word, that means your request is not handled by our website. Please check again later.");
             });
         }
     }
