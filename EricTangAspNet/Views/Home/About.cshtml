@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "About Eric";
+}
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="~/static/img/profile.png" alt="">
+                <div class="intro-text">
+                    <span class="name">Now You Can See Me!</span>
+                    <hr class="star-light">
+                    <span class="skills">Full Stack Web Developer - Data Scientist - Soccer Fanatic</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+@section about {
+    <!-- About Section -->
+    <section id="about">@*class="success"*@
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>Yes, this is a Django web application running on AWS, and it's a full stack job: with Nginx, gunicorn, PostgreSQL all that stuff. Of course, I'll tell you the source code location: <a href='https://github.com/tangcongyuan/DjangoOnAWS' <a style="color: rgb(0,255,0)">my github repo</a>.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>Whereas front-end uses Freelancer, which is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+}

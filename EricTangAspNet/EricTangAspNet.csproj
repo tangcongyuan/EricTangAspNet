@@ -5,12 +5,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="wwwroot\" />
+    <None Include="wwwroot\static\img\portfolio\cabin.png" />
+    <None Include="wwwroot\static\img\portfolio\cake.png" />
+    <None Include="wwwroot\static\img\portfolio\circus.png" />
+    <None Include="wwwroot\static\img\portfolio\game.png" />
+    <None Include="wwwroot\static\img\portfolio\safe.png" />
+    <None Include="wwwroot\static\img\portfolio\submarine.png" />
+    <None Include="wwwroot\static\img\profile.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="2.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" />
   </ItemGroup>
 
 </Project>
