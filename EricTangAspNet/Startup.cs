@@ -24,7 +24,7 @@ namespace EricTangAspNet
 
             app.UseAuthentication();
             app.UseStaticFiles(); // For the wwwroot folder
-            app.UseNodeModules(env);
+            // app.UseNodeModules(env); // Will occur error when deployed to Azure
             app.UseMvcWithDefaultRoute();
 
             app.Run(async (context) =>
