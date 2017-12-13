@@ -35,40 +35,26 @@
 </head>
 <body id="page-top" class="index">
 
-    <!-- Navigation -->
+    <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" asp-controller="Home" asp-action="Index">Eric (Congyuan) Tang</a>
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index" data-toggle="collapse" data-target=".navbar-collapse.in">Eric's ASP.NET App</a>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="/"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a asp-controller="Home" asp-action="Portfolio">Portfolio</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a asp-controller="Home" asp-action="About">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a asp-controller="Home" asp-action="Contact">Contact</a>
-                    </li>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Portfolio" ? "active" : "")"><a asp-controller="Home" asp-action="Portfolio" data-toggle="collapse" data-target=".navbar-collapse.in">Portfolio</a></li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "active" : "")"><a asp-controller="Home" asp-action="Contact" data-toggle="collapse" data-target=".navbar-collapse.in">Contact</a></li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "active" : "")"><a asp-controller="Home" asp-action="About" data-toggle="collapse" data-target=".navbar-collapse.in">About</a></li>
                 </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+            </div><!--/.nav-collapse -->
         </div>
-        <!-- /.container-fluid -->
     </nav>
 
     @RenderBody()
@@ -90,7 +76,7 @@
                 <div class="row">
                     <div class="footer-col col-md-4">
                         <h3>Location</h3>
-                        <p>Worcester Polytechnic Institute<br>Worcester, MA 01609</p>
+                        <p>Visiant Health<br>Southborough, MA 01772</p>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Around the Web</h3>
